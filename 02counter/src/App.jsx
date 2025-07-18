@@ -12,11 +12,22 @@ function App() {
   const addValue = () => {
     // console.log("clicked", counter);
     
-    // counter = counter + 1
-    setCounter(counter + 1)
+    if (counter < 3) {
+      counter = counter + 1
+      setCounter(counter)
+    } else {
+      setCounter(counter=3)
+    }
   }
   const removeValue = () => {
-    setCounter(counter - 1)
+    
+    if (counter > 0) {
+      counter = counter - 1
+      
+    } else {
+      setCounter(counter=0)
+    }
+    setCounter(counter)
   }
 
   return (
